@@ -8,11 +8,8 @@ header, main, nav, footer, figure, figcaption, aside, section, article {
     display: inline;
 }
 header {
-    background-color: #000033;
     color: #FFFFFF;
-    background-image: url("images/sunset.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
+    background: #000033 url("images/sunset.jpg") no-repeat right;
     text-align: center;
     padding-top: 15px;
     height: 60px;
@@ -42,20 +39,15 @@ nav a:hover {
     color: white;
 }
 body {
-    background-color: #4F6D93;
-    background-image: linear-gradient(#FFFFFF, #4F6D93);
+    background: #4F6D93 linear-gradient(#FFFFFF, #4F6D93);
     color: #666666;
     font-family: Arial, Helvetica, sans-serif;
 }
 main {
-    padding-top: 1px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1px 20px 20px 30px;
     display: block;
     background: white;
     margin-left: 190px;
-    padding-left: 30px;
 }
 #wrapper {
     margin: auto;
@@ -156,10 +148,7 @@ tr:nth-of-type(odd) {
     }
     nav li {
         display: inline;
-        padding-top: .25em;
-        padding-bottom: .25em;
-        padding-left: .75em;
-        padding-right: .75em;
+        padding: .25em .75em;
     }
     #yurthero {
         margin-left: 0;
@@ -182,10 +171,7 @@ tr:nth-of-type(odd) {
         padding-top: 1em;
     }
     main {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding: 1em;
         font-size: 90%;
     }
     h1 {
