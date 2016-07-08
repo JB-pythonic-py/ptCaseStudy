@@ -1,3 +1,12 @@
+header, main, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+#mobile {
+    display: none;
+}
+#desktop {
+    display: inline;
+}
 header {
     background-color: #000033;
     color: #FFFFFF;
@@ -107,4 +116,108 @@ footer {
     padding: 20px;
     background: white;
     margin-left: 190px;
+}
+table {
+    border: 1px solid #3399CC;
+    width: 80%;
+    border-spacing: 0;
+}
+td, th {
+    padding: 5px;
+    border: 1px solid #3399CC;
+}
+td {
+    text-align: center;
+}
+.text {
+    text-align: left;
+}
+tr:nth-of-type(odd) {
+    background-color: #F5FAFC;
+}
+@media only screen and (max-width: 64em) {
+    body {
+        margin: 0;
+        background-color: #FFFFFF;
+    }
+    #wrapper {
+        min-width: 0;
+        width: auto;
+        box-shadow: none;
+    }
+    main {
+        margin-left: 0;
+    }
+    nav {
+        float: none;
+        width: auto;
+        text-align: center;
+        padding: .5em;
+    }
+    nav li {
+        display: inline;
+        padding-top: .25em;
+        padding-bottom: .25em;
+        padding-left: .75em;
+        padding-right: .75em;
+    }
+    #yurthero {
+        margin-left: 0;
+        height: 200px;
+    }
+    #trailhero {
+        margin-left: 0;
+        height: 200px;
+    }
+    #homehero {
+        margin-left: 0;
+        height: 200px;
+    }
+    footer {
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 37.5em) {
+    header {
+        padding-top: 1em;
+    }
+    main {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    nav {
+        padding: 0;
+    }
+    nav li {
+        display: block;
+        margin: 0;
+        border-bottom: 2px solid #330000;
+    }
+    nav a {
+        display: block;
+    }
+    #yurthero {
+        background-image: none;
+        height: 0;
+    }
+    #trailhero {
+        background-image: none;
+        height: 0;
+    }
+    #homehero {
+        background-image: none;
+        height: 0;
+    }
+    #mobile {
+        display: inline;
+    }
+    #desktop {
+        display: none;
+    }
 }
