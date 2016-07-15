@@ -7,48 +7,6 @@ header, main, nav, footer, figure, figcaption, aside, section, article {
 #desktop {
     display: inline;
 }
-header {
-    color: #FFFFFF;
-    background: #000033 url("images/sunset.jpg") no-repeat right;
-    text-align: center;
-    padding-top: 15px;
-    height: 60px;
-}
-nav {
-    float: left;
-    padding: 20px;
-    width: 160px;
-    font-weight: bold;
-}
-nav a {
-    text-decoration: none;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    font-size: 1.2em;
-}
-nav a:visited {
-    color: #344873;
-}
-nav a:link {
-    color: #000033;
-}
-nav a:hover {
-    color: white;
-}
-body {
-    background: #4F6D93 linear-gradient(#FFFFFF, #4F6D93);
-    color: #666666;
-    font-family: Arial, Helvetica, sans-serif;
-}
-main {
-    padding: 1px 20px 20px 30px;
-    display: block;
-    background: white;
-    margin-left: 190px;
-}
 #wrapper {
     margin: auto;
     width: 80%;
@@ -75,6 +33,59 @@ main {
     background-size: 100% 100%;
     margin-left: 190px;
 }
+#contact {
+    font-size: 90%;
+}
+.resort {
+    color: #5C7FA3;
+    font-weight: bold;
+}
+header {
+    color: #FFFFFF;
+    background: #000033 url("images/sunset.jpg") no-repeat right;
+    text-align: center;
+    padding-top: 15px;
+    height: 60px;
+}
+nav {
+    float: left;
+    padding: 20px;
+    width: 160px;
+    font-weight: bold;
+}
+nav a {
+    text-decoration: none;
+    transition: color 3s ease-out;
+}
+nav a:visited {
+    color: #344873;
+}
+nav a:link {
+    color: #000033;
+}
+nav a:hover {
+    color: white;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+body {
+    background: #4F6D93 linear-gradient(#FFFFFF, #4F6D93);
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    padding: 1px 20px 20px 30px;
+    display: block;
+    background: white;
+    margin-left: 190px;
+}
+main ul {
+    list-style-image: url("images/marker.gif");
+}
 h1 {
     margin-top: 0;
     margin-bottom: 0;
@@ -89,17 +100,6 @@ h3 {
     color: #000033;
     font-family: Georgia, "Times New Roman", serif;
 }
-main ul {
-    list-style-image: url("images/marker.gif");
-}
-.resort {
-    color: #5C7FA3;
-    font-weight: bold;
-}
-#contact {
-    font-size: 90%;
-}
-
 footer {
     font-size: 75%;
     font-style: italic;
@@ -108,11 +108,15 @@ footer {
     padding: 20px;
     background: white;
     margin-left: 190px;
+    clear: both;
 }
 table {
     border: 1px solid #3399CC;
     width: 80%;
     border-spacing: 0;
+}
+.text {
+    text-align: left;
 }
 td, th {
     padding: 5px;
@@ -121,11 +125,69 @@ td, th {
 td {
     text-align: center;
 }
-.text {
-    text-align: left;
-}
 tr:nth-of-type(odd) {
     background-color: #F5FAFC;
+}
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+    padding-right: 20px;
+}
+input {
+    display: block;
+    margin-bottom: 20px
+}
+input[type="submit"] {
+    margin-left: 130px
+}
+textarea {
+    display: block;
+    margin-bottom: 20px
+}
+video, embed {
+    float: right;
+    padding-left: 20px;
+}
+#gallery {
+    height: 200px;
+    text-align: left;
+    color: black;
+    position: relative;
+}
+#gallery span {
+    position: absolute;
+    left: -1000px;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+#gallery li {
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#gallery ul {
+    width: 300px;
+    list-style-type: none;
+}
+#gallery a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+#gallery a:hover span {
+    position: absolute;
+    top: 16px;
+    left: 320px;
+    text-align: center;
+    opacity: 1;
+}
+figure {
+    position: absolute;
+    left: 280px;
+    text-align: center;
+    opacity: .25;
 }
 @media only screen and (max-width: 64em) {
     body {
@@ -204,6 +266,16 @@ tr:nth-of-type(odd) {
         display: inline;
     }
     #desktop {
+        display: none;
+    }
+    label {
+        float: none;
+        text-align: left;
+    }
+    input[type="submit"] {
+        margin-left: 0;
+    }
+    #gallery {
         display: none;
     }
 }
